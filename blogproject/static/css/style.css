@@ -1,0 +1,341 @@
+/* General Body & Container Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f0f2f5; /* Very light blue-gray background */
+    color: #343a40; /* Dark gray for text */
+    -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 960px;
+    margin: 40px auto; /* More vertical spacing */
+    padding: 30px; /* More internal padding */
+    background-color: #ffffff; /* Pure white content area */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Softer, more pronounced shadow */
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+    color: #212529; /* Darker headings */
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-weight: 600; /* Slightly bolder headings */
+}
+
+h1 { font-size: 2.8rem; margin-bottom: 1.2rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem; /* Slightly larger paragraph text */
+    color: #495057; /* Slightly lighter gray for paragraphs */
+}
+
+a {
+    color: #007bff; /* Standard Bootstrap blue */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #ffffff !important; /* White navbar */
+    border-bottom: 1px solid #e0e0e0; /* Subtle border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Light shadow */
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 700; /* Bolder brand name */
+    color: #343a40 !important;
+}
+
+.navbar-nav .nav-link {
+    color: #555 !important;
+    font-weight: 500;
+    margin-left: 1.2rem; /* More space between links */
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #e9ecef; /* Light highlight on hover */
+    color: #007bff !important;
+}
+
+/* Form Styles */
+form {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    margin-top: 25px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+    padding: 0.75rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+    transform: translateY(-1px);
+}
+
+/* Blog Post List Styling */
+.blog-post {
+    margin-bottom: 2.5rem; /* More space between posts */
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed #e0e0e0; /* Dashed separator */
+}
+
+.blog-post:last-child {
+    border-bottom: none; /* No border for the last post */
+}
+
+.blog-post-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.blog-post-title a {
+    color: #212529; /* Darker link for titles */
+    text-decoration: none;
+}
+
+.blog-post-title a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.blog-post-meta {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+}
+
+.blog-post-content {
+    color: #495057;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Post Detail Page Styling */
+.post-detail-content {
+    line-height: 1.8;
+    color: #495057;
+    font-size: 1.05rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f2f5;
+}
+
+.post-detail-content h1,
+.post-detail-content h2,
+.post-detail-content h3,
+.post-detail-content h4,
+.post-detail-content h5,
+.post-detail-content h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-actions {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+    display: flex; /* Use flexbox for alignment */
+    gap: 15px; /* Space between action links/buttons */
+}
+
+.post-actions a {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    color: #343a40;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.post-actions a:hover {
+    background-color: #dee2e6;
+    text-decoration: none;
+}
+
+.post-actions form {
+    margin: 0; /* Remove default form margin */
+    padding: 0; /* Remove default form padding */
+    border: none; /* Remove default form border */
+    background: none; /* Remove default form background */
+}
+
+.post-actions button.nav-link { /* Styling for the logout button in navbar, applied to internal buttons */
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: inherit; /* Inherit color from parent link */
+    font-size: inherit; /* Inherit font size from parent link */
+    font-weight: inherit; /* Inherit font weight from parent link */
+    line-height: inherit;
+    display: inline-block; /* Ensure it respects padding/margin if added */
+}
+
+
+/* Messages Styling */
+.alert {
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    position: relative;
+    padding-right: 3rem; /* Space for close button */
+}
+
+.alert-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+
+.alert-info {
+    color: #055160;
+    background-color: #cff4fc;
+    border-color: #b6effb;
+}
+
+.alert-warning {
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+}
+
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+
+.alert .btn-close {
+    position: absolute;
+    top: 50%;
+    right: 1.25rem;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    line-height: 1;
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.alert .btn-close:hover {
+    opacity: 1;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+    color: #6c757d;
+    border-top: 1px solid #e0e0e0;
+    background-color: #ffffff; /* White footer */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 0; /* Remove rounded corners on small screens */
+        box-shadow: none; /* Remove shadow on small screens */
+    }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.4rem; }
+
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 0.75rem 1rem;
+        text-align: center;
+    }
+
+    .blog-post {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .post-actions {
+        flex-direction: column; /* Stack actions vertically */
+        gap: 10px;
+    }
+
+    .post-actions a, .post-actions form {
+        width: 100%;
+        text-align: center;
+    }
+}

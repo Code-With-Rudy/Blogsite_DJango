@@ -1,0 +1,19 @@
+{# blog/templates/blog/post_detail.html #}
+{% extends 'base.html' %} {# Assuming you have a base.html in your project-level templates #}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p>By {{ post.author.username }} on {{ post.date_posted|date:"F d, Y" }}</p>
+    <div>
+        {{ post.content|linebreaksbr }} {# Renders newlines in content as <br> tags #}
+    </div>
+    <p>
+        <a href="{% url 'post_list' %}">Back to All Posts</a>
+        {% if user.is_authenticated and user == post.author %}
+            | <a href="{% url 'post_edit' post.pk %}">Edit Post</a>
+            | <a href="{% url 'post_delete' post.pk %}">Delete Post</a>
+        {% endif %}
+    </p>
+{% endblock %}

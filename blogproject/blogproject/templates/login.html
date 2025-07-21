@@ -1,0 +1,19 @@
+{# myblogproject/templates/registration/login.html #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="post">
+        {% csrf_token %} {# Django's security token for forms #}
+        {{ form.as_p }} {# Renders form fields as paragraphs #}
+        <button type="submit">Login</button>
+    </form>
+    <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
+    <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+</body>
+</html>

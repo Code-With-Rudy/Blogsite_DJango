@@ -1,0 +1,10 @@
+{# blogproject/templates/registration/logged_out.html #}
+{% extends 'base.html' %} {# Extend your base template #}
+
+{% block title %}Logged Out{% endblock %}
+
+{% block content %}
+    <h2>You have been logged out.</h2>
+    <p><a href="{% url 'login' %}">Log in again</a></p>
+    <p><a href="{% url 'post_list' %}">Go to Home</a></p>
+{% endblock %}
